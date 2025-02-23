@@ -29,7 +29,7 @@ pipeline{
         stage('Static code analysis: Sonarqube'){
             steps{
                script{
-                   withSonarQubeEnv('sonarqube-api') {
+                   withSonarQubeEnv('sonar-scanner') {
                    sh 'mvn clean package sonar:sonar -Dsonar.host.url=http://98.80.245.143:9000'
                    }
        
