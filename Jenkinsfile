@@ -30,9 +30,11 @@ pipeline{
             steps{
                script{
                    withSonarQubeEnv('sonarqube-api') {
-                   sh 'mvn clean package sonar:sonar'
-            }
+                   sh 'mvn clean package sonar:sonar -Dsonar.host.url=http://98.80.245.143:9000'
+                   }
        
+                }
+            }
         }
     }
 }
