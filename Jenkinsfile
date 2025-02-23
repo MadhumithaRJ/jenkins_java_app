@@ -31,10 +31,10 @@ pipeline{
                script{
                    withSonarQubeEnv('sonarqube-api') {
                    sh 'mvn clean package sonar:sonar'
-            
+                  }
                }
             }
-        }
        
+        }
     }
 }
